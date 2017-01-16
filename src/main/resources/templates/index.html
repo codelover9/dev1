@@ -1,7 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head><title>Hello World</title></head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Devops Buddy</title>
+<link th:href="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}" rel="stylesheet" 
+media="screen" />
+
+<link th:href="@{/css/style.css}" rel="stylesheet" 
+media="screen" />
+ 
+</head>
 <body>
-  <h1> Hello World</h1>
+
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h1 th:text="#{index.h1.text}"></h1>
+            <p class="lead" th:text="#{index.p.lead}"></p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well">
+                    <h2 class="text-center" th:text="#{index.basic.membership}"></h2>
+                    <h4 th:text="#{index.h4.basic.membership}"></h4>
+                    <br/>
+                    <a class="btn btn-primary btn-lg btn-block"
+                       th:href="@{/signup?planId=1}"
+                       th:text="#{index.basic.signup.button}"></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+            
+            </div>
+        </div>
+
+    </div>
+    
+    
+<script th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>    
+<script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>    
+
+
 </body>
 </html>
